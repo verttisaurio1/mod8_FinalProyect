@@ -142,6 +142,7 @@ def extract_answers(request):
 def show_exam_result(request, course_id, submission_id):
     course = get_object_or_404(Course, pk=course_id)
     submission = get_object_or_404(Submission, pk=submission_id)
+    
     choice_list = submission.choices.all()
     choice_id_list = []
     for choice in choice_list:
